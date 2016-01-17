@@ -30,12 +30,11 @@ module.exports = {
 	// 	extensions: ['', '.js', '.less']
 	// },
 
-	// plugins: [
-	// 	new webpack.HotModuleReplacementPlugin(),
-	// 	new webpack.NoErrorsPlugin(),
-	// 	new webpack.ProvidePlugin({
-	// 		React: 'react',
-	// 		$: 'jquery'
-	// 	})
-	// ]
+	plugins: [
+		//new webpack.HotModuleReplacementPlugin(),
+		//new webpack.NoErrorsPlugin(),
+		new webpack.ProvidePlugin({
+			React: 'react'
+		})
+	]
 };
