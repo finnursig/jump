@@ -38,7 +38,7 @@ app.set('view engine', 'ejs'); // register the template engine
 
 app.use('/auth', require('./server/routes/auth'));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     Promise.all(users.getAll(), reports.getAll())
         .then((users, reports) => {
             res.render('index', {
